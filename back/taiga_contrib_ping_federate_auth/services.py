@@ -102,7 +102,7 @@ def ping_federate_register(
 
 def ping_federate_login_func(request):
 
-    reference = request.QUERY_PARAMS['REF']
+    reference = request.DATA['REF']
 
     user_info = connector.call_assertion(reference)
 
