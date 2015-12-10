@@ -45,7 +45,9 @@
                 $location.search("next", null);
                 $location.search("REF", null);
                 $location.search("TargetResource", null);
-                return $location.path(nextUrl);
+
+                var redirectToUri = $location.url(nextUrl).absUrl();
+                return $window.location.href = redirectToUri;
 
             };
             
