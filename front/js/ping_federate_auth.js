@@ -67,21 +67,19 @@
             };
 
             var loginWithPingFederateAccount = function() {
-                var code, data, token, type;
-                type = $params.state;
-                code = $params.code;
-                token = $params.token;
+                var targetResource = $params.TargetResource;
+                var ref = $params.REF;
 
-                if (!(type === "pingfederate" && code)) {
+                if (!(targetResource && ref)) {
                     return;
                 }
                 $loader.start();
-                data = {
-                    code: code,
-                    token: token
+                var data = {
+                    targetResource: targetResource,
+                    REF: ref
                 };
                 return $auth.
-                    login(data, type).
+                    login(data, "pingfederate").
                     then(
                         loginOnSuccess,
                         loginOnError
