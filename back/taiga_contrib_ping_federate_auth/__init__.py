@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Copyright (C) 2015 Allan Simon <allan.simon@supinfo.com>
 # Copyright (C) 2014 Andrey Antukh <niwi@niwi.be>
 # Copyright (C) 2014 Jesús Espino <jespinog@gmail.com>
@@ -16,6 +17,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-__version__ = (0, 0, 4)
+__version__ = (0, 0, 5)
 
 default_app_config = "taiga_contrib_ping_federate_auth.apps.TaigaContribPingFederateAuthAppConfig"

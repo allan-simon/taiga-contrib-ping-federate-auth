@@ -93,7 +93,7 @@ def call_assertion(reference):
     return User(
         guid=data.get("userGUID", None),
         username=data.get("subject", None),
-        full_name=data.get("firstname", None) + data.get("lastname", None),
+        full_name=data.get("firstname", None) + " " + data.get("lastname", None),
         email=data.get("email", None),
         bio="",
     )
