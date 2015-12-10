@@ -1,0 +1,7 @@
+|module.run(['$templateCache', ($templateCache) ->
+|  $templateCache.put('contrib/ping_federate_auth', '''
+div(tg-ping-federate-login-button)
+    a.button.button-auth(href="", title="Enter with your PingFederate account")
+        img(src="images/contrib/pf-logo.png")
+        span Login with Ping Federate
+|''')]);

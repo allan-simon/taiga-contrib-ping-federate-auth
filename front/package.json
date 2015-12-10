@@ -1,0 +1,29 @@
+{
+  "name": "taiga-contrib-ping-federate-auth",
+  "version": "0.0.1",
+  "description": "Taiga contrib plugin for Ping Federate authentication",
+  "main": "index.js",
+  "scripts": {
+    "build-jade": "node_modules/jade/bin/jade.js partials/contrib/ping_federate_auth.jade -o dist/",
+    "build": "npm run build-jade;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allan-simon/taiga-contrib-ping-federate-auth"
+  },
+  "keywords": [
+    "pingfederate",
+    "taiga",
+    "authentication",
+    "plugin"
+  ],
+  "author": "Allan Simon <allan.simon@supinfo.com>",
+  "license": "AGPL",
+  "bugs": {
+    "url": "https://github.com/allan-simon/taiga-contrib-ping-federate-auth/issues"
+  },
+  "homepage": "https://github.com/allan-simon/taiga-contrib-ping-federate-auth",
+  "dependencies": {
+    "jade": "^1.9.1"
+  }
+}
