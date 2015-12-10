@@ -43,16 +43,15 @@
 
                 $events.setupConnection();
                 $location.search("next", null);
-                $location.search("token", null);
-                $location.search("state", null);
-                $location.search("code", null);
+                $location.search("REF", null);
+                $location.search("TargetResource", null);
                 return $location.path(nextUrl);
 
             };
             
             var loginOnError = function(response) {
-                $location.search("state", null);
-                $location.search("code", null);
+                $location.search("TargetResource", null);
+                $location.search("REF", null);
                 $loader.pageLoaded();
                 if (response.data.error_message) {
                     return $confirm.notify(
