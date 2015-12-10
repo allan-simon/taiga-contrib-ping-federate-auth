@@ -99,8 +99,8 @@
                     var PING_FEDERATE_AUTH_SERVICE_URL = $config.get("pingfederateAuthServiceURL", null);
                     var PING_FEDERATE_TARGET_RESOURCE = $config.get("pingfederateTargetResource", null);
                     var url = "" + PING_FEDERATE_AUTH_SERVICE_URL +
-                        "/pf/adapter2adapter" + clientId +
-                        "?TargetResource" + PING_FEDERATE_TARGET_RESOURCE
+                        "/pf/adapter2adapter" +
+                        "?TargetResource=" + PING_FEDERATE_TARGET_RESOURCE
                     ;
                     console.log(redirectToUri);
 
@@ -133,7 +133,7 @@
             "$tgAuth",
             "$tgNavUrls",
             "tgLoader",
-            GoogleLoginButtonDirective
+            PingFederateLoginButtonDirective
         ]
     );
 
