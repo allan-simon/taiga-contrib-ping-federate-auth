@@ -144,7 +144,7 @@
                 '<div tg-ping-federate-login-button="tg-ping-federate-login-button">' +
                     '<a href="" title="Enter with your ping federate account" class="button button-auth">'+
                         '<img src="images/contrib/google-logo.png"/>' + 
-                        '<span>Login with Ping Federate</span>' +
+                        '<span>Login with SSO</span>' +
                     '</a>' + 
                 '</div>'
             );
