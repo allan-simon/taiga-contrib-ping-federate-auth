@@ -22,9 +22,9 @@ Modify your settings/local.py and include the line:
 
 ### Taiga Front
 
-Download in your `dist/js/` directory of Taiga front the `taiga-contrib-google-auth` compiled code:
+Download in your `dist/js/` directory of Taiga front the `taiga-contrib-ping-federate-auth` compiled code:
 
-Download in your `dist/images/contrib` directory of Taiga front the `taiga-contrib-google-auth` google icon:
+Download in your `dist/images/contrib` directory of Taiga front the `taiga-contrib-ping-federate-auth` google icon:
 
 ```bash
   cd dist/images/contrib
