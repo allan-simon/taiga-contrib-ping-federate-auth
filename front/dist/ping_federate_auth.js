@@ -1,18 +1,6 @@
 (function() {
     'use strict';
 
-    this.taigaContribPlugins = this.taigaContribPlugins || [];
-
-    var pingFederateAuthInfo = {
-        slug: "pingfederate-auth",
-        name: "Ping Federate Auth",
-        type: "auth",
-        module: "taigaContrib.pingfederateAuth",
-        template: "contrib/ping_federate_auth"
-    };
-
-    this.taigaContribPlugins.push(pingFederateAuthInfo);
-
     var module = angular.module('taigaContrib.pingfederateAuth', []);
 
     var PingFederateLoginButtonDirective = function(
@@ -30,7 +18,7 @@
          *
          */
         var link = function($scope, $el, $attrs) {
-        
+
             var clientId = $config.get("", null);
             var loginOnSuccess = function(response) {
                 var nextUrl = $navUrls.resolve("home");
@@ -50,7 +38,7 @@
                 return $window.location.href = redirectToUri;
 
             };
-            
+
             var loginOnError = function(response) {
                 $location.search("TargetResource", null);
                 $location.search("REF", null);
@@ -87,7 +75,7 @@
                     )
                 ;
             };
-      
+
             loginWithPingFederateAccount();
             $el.on(
                 "click",
@@ -140,12 +128,12 @@
         '$templateCache',
         function($templateCache) {
             return $templateCache.put(
-                'contrib/ping_federate_auth',
+                '/plugins/auth/ping_federate_auth.html',
                 '<div tg-ping-federate-login-button="tg-ping-federate-login-button">' +
                     '<a href="" title="Enter with your ping federate account" class="button button-auth">'+
-                        '<img src="images/contrib/google-logo.png"/>' + 
+                        '<img src="images/contrib/google-logo.png"/>' +
                         '<span>Login with SSO</span>' +
-                    '</a>' + 
+                    '</a>' +
                 '</div>'
             );
         }

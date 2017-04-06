@@ -1,0 +1,9 @@
+{
+    "name": "Ping Federate Auth",
+    "slug": "pingfederate-auth",
+    "description": "Authenticate with SSO.",
+    "type": "auth",
+    "module": "taigaContrib.pingfederateAuth",
+    "template": "/plugins/auth/ping_federate_auth.html",
+    "js": "/plugins/auth/ping_federate_auth.js"
+}
