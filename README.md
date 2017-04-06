@@ -22,8 +22,13 @@ Modify your settings/local.py and include the line:
 
 ### Taiga Front
 
-Download in your `dist/js/` directory of Taiga front the `taiga-contrib-ping-federate-auth` compiled code:
+Download in your `dist/plugins/` directory of Taiga front the `taiga-contrib-ping-federate-auth` compiled code:
 
+```bash
+  cd dist/plugins/
+  svn export "https://github.com/allan-simon/taiga-contrib-ping-federate-auth/trunk/front/dist" "auth"
+
+```
 Download in your `dist/images/contrib` directory of Taiga front the `taiga-contrib-ping-federate-auth` google icon:
 
 ```bash
@@ -31,11 +36,11 @@ Download in your `dist/images/contrib` directory of Taiga front the `taiga-contr
   wget "https://raw.googleusercontent.com/taigaio/taiga-contrib-google-auth/stable/front/images/contrib/google-logo.png"
 ```
 
-Include in your dist/js/conf.json in the contribPlugins list the value `"/js/ping_federate_auth.js"`:
+Include in your dist/conf.json in the contribPlugins list the value `"/plugins/auth/ping_federate_auth.json"`:
 
 ```json
 ...
-    "contribPlugins": ["/js/ping_federate_auth.js"]
+    "contribPlugins": ["/plugins/auth/ping_federate_auth.json"]
 ...
 ```
 
