@@ -19,15 +19,13 @@
 from django.apps import AppConfig
 from django.db.models import signals
 
-from taiga.auth.services import register_auth_plugin
-from . import services
-
-
 class TaigaContribPingFederateAuthAppConfig(AppConfig):
     name = "taiga_contrib_ping_federate_auth"
     verbose_name = "Taiga contrib PingFederate auth App Config"
 
     def ready(self):
+        from taiga.auth.services import register_auth_plugin
+        from . import services
         register_auth_plugin(
             "pingfederate",
             services.ping_federate_login_func,
